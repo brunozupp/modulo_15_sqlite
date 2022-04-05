@@ -3,7 +3,12 @@
    <application
         android:label="modulo_15_sqlite"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:fullBackupOnly="false"
+        android:allowBackup="false"> <!-- A partir de uma versão do android, o SO começou a criar backups na nuvem dos dados do app, de todo arquivo
+        utilizado e isso pode causar problemas para o app, pois pode ser que tenha um arquivo para saber se o cara está logado no sistema e ao
+        desinstalar o app e instalar de novo o arquivo em questão vai ser restaurado do backup e o cara vai dar que está logado no app ainda.
+        Por isso está sendo desabilitado aqui nessas duas propriedades -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
