@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    DatabaseSqlite().openConnection();
+    _database();
   }
 
   Future<void> _database() async {
